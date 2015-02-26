@@ -6,14 +6,13 @@
 
 @section('content')
 	
-	{!! Form::open(['route' => 'login_path', 'class' => 'login_form']) !!}
+	{!! Form::open(['route' => 'login_path']) !!}
+		
+		{!! Form::label('email', ['class' => 'label_style']) !!}<br>
+		{!! Form::email('email', ['required']) !!}
 
-
-		{!! Form::label('email', 'Email') !!}<br>
-		{!! Form::email('email', ['class' => 'form_text_field', 'required']) !!}
-
-		{!! Form::label('password', 'Password') !!}<br>
-		{!! Form::password('password', ['class' => 'form_text_field', 'required']) !!}
+		{!! Form::label('Password', ['class' => 'label_style']) !!}<br>
+		{!! Form::password('password', null, ['required']) !!}
 
 	{!! Form::close() !!}
 
