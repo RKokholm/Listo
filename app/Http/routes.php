@@ -13,3 +13,5 @@
 
 Route::get('/', ['as' => 'home', 'uses' => 'PagesController@index']);
 
+Route::get('login', ['as' => 'login_path', 'uses' => 'AuthController@get']);
+Route::post('login', ['as' => 'login_path', 'uses' => 'AuthController@post']);

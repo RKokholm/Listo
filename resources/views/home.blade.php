@@ -1,9 +1,9 @@
 @extends('layout.main')
 
 @section('title')
-
-@stop
+	Listo
+@endsection
 
 @section('content')
 
-@stop
+@endsection

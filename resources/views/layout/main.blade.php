@@ -14,12 +14,12 @@
 <body>
 	<div id="header">
 		<div id="headercenter">
-			<span id="icon">Listo</span>
+			<a href="{{ URL::route('home') }}"><span id="icon">Listo</span></a>
 
 			@if (Auth::check())
-				<span class="log_auth"><a href="#">Log ud</a></span>
+				<a href="{{ URL::route('logout') }}"><span class="log_auth">Sign out</span></a>
 			@else 
-				<a href="#"><span class="log_auth">Log ind</span></a>
+				<a href="{{ URL::route('login_path') }}"><span class="log_auth">Sign in</span></a>
 			@endif
 
 		</div>
