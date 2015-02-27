@@ -5,21 +5,36 @@ use App\Http\Controllers\Controller;
 
 use Illuminate\Http\Request;
 
-class AuthController extends Controller {
-
-	public function create()
-	{
-		return view('auth.login');
-	}
+class UsersController extends Controller {
 
 	/**
 	 * Display a listing of the resource.
 	 *
 	 * @return Response
 	 */
-	public function store()
+	public function index()
 	{
 		//
+	}
+
+	/**
+	 * Show the form for creating a new resource.
+	 *
+	 * @return Response
+	 */
+	public function create()
+	{
+		return view('auth.register');
+	}
+
+	/**
+	 * Store a newly created resource in storage.
+	 *
+	 * @return Response
+	 */
+	public function store()
+	{
+		return 'Create user';
 	}
 
 	/**

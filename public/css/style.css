@@ -31,6 +31,12 @@ time, mark, audio, video {
 	margin: auto;
 }
 
+#content {
+	width: 900px;
+	margin: auto;
+	height 100%;
+}
+
 #icon {
 	font-family: 'Lobster';
 	font-size: 60px;
@@ -54,4 +60,15 @@ time, mark, audio, video {
 	color: #68C3A3;
 	background: white;
 	-webkit-transition-duration: 0.2s;
+}
+
+.label_style {
+	color: #68C3A3;
+	font-family: Cabin;
+	font-size: 20px;
+}
+
+.form_field {
+	padding: 5px;
+
 }

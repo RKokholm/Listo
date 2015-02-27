@@ -13,5 +13,8 @@
 
 Route::get('/', ['as' => 'home', 'uses' => 'PagesController@index']);
 
-Route::get('login', ['as' => 'login_path', 'uses' => 'AuthController@get']);
-Route::post('login', ['as' => 'login_path', 'uses' => 'AuthController@post']);
+Route::get('login', ['as' => 'login_path', 'uses' => 'AuthController@create']);
+Route::post('login', ['as' => 'login_path', 'uses' => 'AuthController@store']);
+
+Route::get('register', ['as' => 'register_path', 'uses' => 'UsersController@create']);
+Route::post('register', ['as' => 'register_path', 'uses' => 'UsersController@store']);

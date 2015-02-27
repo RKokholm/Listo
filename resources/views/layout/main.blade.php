@@ -24,6 +24,10 @@
 
 		</div>
 	</div>
-	@yield('content')
+	
+	<div id="content">
+		@yield('content')
+	</div>
 </body>
+
 </html>
