@@ -10,8 +10,12 @@
 		{!! Form::email('email', null, ['class' => 'form_field', 'required']) !!}<br><br>
 
 		{!! Form::label('password', null, ['class' => 'label_style']) !!}<br>
-		{!! Form::password('password', ['class' => 'form_field', 'required']) !!}
+		{!! Form::password('password', ['class' => 'form_field', 'required']) !!}<br>
+
+		{!! Form::submit('Log in', ['class' => 'button_style']) !!}
 		
 	{!! Form::close() !!}
+
+	<a href="{{ URL::route('register_path') }}"><span class="link_style">Create Account</span></a>
 
 @endsection
