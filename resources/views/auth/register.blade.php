@@ -18,8 +18,19 @@
 		{!! Form::label('password', null,['class' => 'label_style']) !!}<br>
 		{!! Form::password('password', ['class' => 'form_field', 'required']) !!}<br>
 
+		{!! Form::label('password_confirmation', null,['class' => 'label_style']) !!}<br>
+		{!! Form::password('password_confirmation', ['class' => 'form_field', 'required']) !!}<br><br>
+
 		{!! Form::submit('Create Account', ['class' => 'button_style']) !!}
 
 	{!! Form::close() !!}
+
+	<?php
+
+		foreach($errors->all() as $error){
+			echo $error;
+		}
+
+	?>
 
 @endsection
