@@ -60,8 +60,6 @@ class UsersController extends Controller {
 			return Redirect::back()->withErrors($validator)->withInput();
 		}
 
-		return Session::all();
-
 		return User::create([
 			'first_name' => Input::get('first_name'),
 			'last_name' => Input::get('last_name'),
