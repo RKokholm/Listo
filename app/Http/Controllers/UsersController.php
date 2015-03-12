@@ -13,7 +13,7 @@ use Redirect;
 use Input;
 use Create;
 use App\User;
-use Input;
+use Session;
 
 class UsersController extends Controller {
 
@@ -59,6 +59,8 @@ class UsersController extends Controller {
 		if ($validator->fails()){
 			return Redirect::back()->withErrors($validator)->withInput();
 		}
+
+		return Session::all();
 
 		return User::create([
 			'first_name' => Input::get('first_name'),
