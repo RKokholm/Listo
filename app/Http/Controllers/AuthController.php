@@ -28,7 +28,7 @@ class AuthController extends Controller {
 			return redirect()->intended('/');
 		}
 
-		return 'fejl';
+		return Redirect::back()->withInput()->withErrors(['Wrong username or password']);
 	}
 
 	/**

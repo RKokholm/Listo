@@ -17,5 +17,16 @@
 	{!! Form::close() !!}
 
 	<a href="{{ URL::route('register_path') }}"><span class="link_style">Create Account</span></a>
+	
+	@if($errors->any())
+
+		<ul>
+			@foreach($errors->all() as $error)
+				<li>{{ $error }}</li>
+			@endforeach
+		</ul>
+
+	@endif
+		
 
 @endsection
