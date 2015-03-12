@@ -25,12 +25,12 @@
 
 	{!! Form::close() !!}
 
-	<?php
+	<ul class="errors">
+	@foreach($errors->all() as $error)
+		
+		<li>{{ $error }}</li>
 
-		foreach($errors->all() as $error){
-			echo $error;
-		}
-
-	?>
+	@endforeach
+	</ul>
 
 @endsection

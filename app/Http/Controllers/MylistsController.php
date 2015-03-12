@@ -4,31 +4,37 @@ use App\Http\Requests;
 use App\Http\Controllers\Controller;
 
 use Illuminate\Http\Request;
-use Input;
-use Auth;
-use Redirect;
 
-
-class AuthController extends Controller {
-
-	public function create()
-	{
-		return view('auth.login');
-	}
+class MylistsController extends Controller {
 
 	/**
 	 * Display a listing of the resource.
 	 *
 	 * @return Response
 	 */
+	public function index()
+	{
+		//
+	}
+
+	/**
+	 * Show the form for creating a new resource.
+	 *
+	 * @return Response
+	 */
+	public function create()
+	{
+		return view('personal.mylists');
+	}
+
+	/**
+	 * Store a newly created resource in storage.
+	 *
+	 * @return Response
+	 */
 	public function store()
 	{
-		if (Auth::attempt(['email' => Input::get('email'), 'password' => Input::get('password')])){
-
-			return redirect()->intended('/');
-		}
-
-		return 'fejl';
+		//
 	}
 
 	/**
@@ -73,13 +79,6 @@ class AuthController extends Controller {
 	public function destroy($id)
 	{
 		//
-	}
-
-	public function logout()
-	{
-		Auth::logout();
-
-		return Redirect::home();
 	}
 
 }

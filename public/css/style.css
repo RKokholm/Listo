@@ -59,12 +59,12 @@ time, mark, audio, video {
 .log_auth {
 	color: white;
 	float: right;
-	font-size: 26px;
+	font-size: 20px;
 	text-decoration: none;
 	font-family: 'Cabin';
 	border-radius: 3px;
-	padding: 8px 17px;
-	margin: 24px 10px;
+	padding: 8px 11px;
+	margin: 28px 0px;
 }
 
 .log_auth:hover {

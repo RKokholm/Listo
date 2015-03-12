@@ -46,26 +46,25 @@ class UsersController extends Controller {
 	{
 		$validator = Validator::make(Input::all(),
 			[
-			
 			'first_name' => 'required|min:3|max:20',
 			'last_name' => 'required|min:3|max:20',
 			'email' => 'required|email|unique:users',
 			'password' => 'required|confirmed|max:60|min:6',
 			'password_confirmation' => 'required'
-			
-			]
-		);	
+			]);	
 
 		if ($validator->fails()){
 			return Redirect::back()->withErrors($validator)->withInput();
 		}
 
-		return User::create([
+		User::create([
 			'first_name' => Input::get('first_name'),
 			'last_name' => Input::get('last_name'),
 			'email' => Input::get('email'),
 			'password' => bcrypt(Input::get('password'))
 		]);
+
+		return Redirect::route('login_path');
 	}
 
 	/**

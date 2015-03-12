@@ -17,7 +17,7 @@
 			<a href="{{ URL::route('home') }}"><span id="icon">Listo</span></a>
 
 			@if (Auth::check())
-				<a href="{{ URL::route('logout') }}"><span class="log_auth">Sign out</span></a>
+				<a href="{{ URL::route('mylists_path') }}"><span class="log_auth">My Lists</span></a> <a href="{{ URL::route('logout_path') }}"><span class="log_auth">Sign out</span></a>
 			@else 
 				<a href="{{ URL::route('login_path') }}"><span class="log_auth">Sign in</span></a>
 			@endif
