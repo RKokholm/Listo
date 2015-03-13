@@ -4,6 +4,7 @@ use App\Http\Requests;
 use App\Http\Controllers\Controller;
 
 use Illuminate\Http\Request;
+use App\User;
 
 class PagesController extends Controller {
 
@@ -14,7 +15,8 @@ class PagesController extends Controller {
 	 */
 	public function index()
 	{
-		return view('home');
+		$users = User::all();
+		return view('home', compact('users'));
 	}
 
 	/**

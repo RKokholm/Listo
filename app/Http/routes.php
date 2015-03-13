@@ -21,3 +21,5 @@ Route::get('logout', ['as' => 'logout_path', 'uses' => 'AuthController@logout'])
 
 Route::get('register', ['as' => 'register_path', 'uses' => 'UsersController@create']);
 Route::post('register', ['as' => 'register_path', 'uses' => 'UsersController@store']);
+
+Route::get('@{username}', ['as' => 'profile_path', 'uses' => 'ProfilesController@create']);

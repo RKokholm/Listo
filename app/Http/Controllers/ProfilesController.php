@@ -5,7 +5,7 @@ use App\Http\Controllers\Controller;
 
 use Illuminate\Http\Request;
 
-class MylistsController extends Controller {
+class ProfilesController extends Controller {
 
 	/**
 	 * Display a listing of the resource.
@@ -24,7 +24,7 @@ class MylistsController extends Controller {
 	 */
 	public function create()
 	{
-		return view('personal.mylists');
+		//
 	}
 
 	/**

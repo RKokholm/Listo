@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
@@ -17,7 +18,7 @@
 			<a href="{{ URL::route('home') }}"><span id="icon">Listo</span></a>
 
 			@if (Auth::check())
-				<a href="{{ URL::route('mylists_path') }}"><span class="log_auth">My Lists</span></a> <a href="{{ URL::route('logout_path') }}"><span class="log_auth">Sign out</span></a>
+				<a href="#"><span class="log_auth">{{ Auth::user()->first_name }}</span></a> <a href="{{ URL::route('logout_path') }}"><span class="log_auth">Sign out</span></a>
 			@else 
 				<a href="{{ URL::route('login_path') }}"><span class="log_auth">Sign in</span></a>
 			@endif

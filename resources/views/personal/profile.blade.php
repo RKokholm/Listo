@@ -1,7 +1,7 @@
 @extends('layout.main')
 
 @section('title')
-	My Lists
+	Your Profile
 @stop
 
 @section('content')
