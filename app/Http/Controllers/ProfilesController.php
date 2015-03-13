@@ -4,6 +4,9 @@ use App\Http\Requests;
 use App\Http\Controllers\Controller;
 
 use Illuminate\Http\Request;
+use App\User;
+use App;
+use Redirect;
 
 class ProfilesController extends Controller {
 
@@ -43,9 +46,17 @@ class ProfilesController extends Controller {
 	 * @param  int  $id
 	 * @return Response
 	 */
-	public function show($id)
+	public function show($first_name)
 	{
-		//
+		$user = User::where('first_name', '=', $first_name);
+
+		if($user->count()) {
+
+			$user = $user->first();
+			return view('profiles.show')->with('user', $user);
+		}
+
+		return Redirect::route('home');
 	}
 
 	/**

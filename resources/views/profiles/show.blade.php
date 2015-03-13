@@ -1,9 +1,6 @@
 @extends('layout.main')
 
-@section('title')
-	Your Profile
-@stop
-
 @section('content')
+	<h1>Profile {{ $user->first_name }}</h1>
 
 @stop

@@ -12,7 +12,7 @@
 */
 
 Route::get('/', ['as' => 'home', 'uses' => 'PagesController@index']);
-Route::get('mylists', ['as' => 'mylists_path', 'uses' => 'MylistsController@create']);
+Route::get('/{profile}', ['as' => 'profile_path', 'uses' => 'ProfilesController@show']);
 
 Route::get('login', ['as' => 'login_path', 'uses' => 'AuthController@create']);
 Route::post('login', ['as' => 'login_path', 'uses' => 'AuthController@store']);
