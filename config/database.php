@@ -57,7 +57,7 @@ return [
 			'host'      => 'localhost',
 			'database'  => 'Listo',
 			'username'  => 'root',
-			'password'  => '',
+			'password'  => 'gerdes',
 			'charset'   => 'utf8',
 			'collation' => 'utf8_unicode_ci',
 			'prefix'    => '',

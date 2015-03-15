@@ -12,7 +12,6 @@
 */
 
 Route::get('/', ['as' => 'home', 'uses' => 'PagesController@index']);
-Route::get('/{profile}', ['as' => 'profile_path', 'uses' => 'ProfilesController@show']);
 
 Route::get('login', ['as' => 'login_path', 'uses' => 'AuthController@create']);
 Route::post('login', ['as' => 'login_path', 'uses' => 'AuthController@store']);
@@ -23,3 +22,5 @@ Route::get('register', ['as' => 'register_path', 'uses' => 'UsersController@crea
 Route::post('register', ['as' => 'register_path', 'uses' => 'UsersController@store']);
 
 Route::get('@{username}', ['as' => 'profile_path', 'uses' => 'ProfilesController@create']);
+
+Route::get('/{profile}', ['as' => 'profile_path', 'uses' => 'ProfilesController@show']);
