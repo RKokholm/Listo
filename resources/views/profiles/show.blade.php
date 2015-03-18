@@ -1,6 +1,13 @@
 @extends('layout.main')
 
 @section('content')
-	<h1>Profile {{ $user->first_name }}</h1>
+	<div id="right_area">
+		
+	</div>	
 
+	<div id="main_area">
+		{{ $user->first_name }}
+		<br><br>
+		{{ $user->profile->about }}
+	</div>
 @stop

@@ -19,7 +19,7 @@ class CreateProfilesTable extends Migration {
 			$table->string('about');
 			$table->string('facebook');
 			$table->string('twitter');
-			$table->integer('list_amount');
+			$table->timestamps();
 
 		});
 

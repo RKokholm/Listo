@@ -24,7 +24,6 @@ class AuthController extends Controller {
 	public function store()
 	{
 		if (Auth::attempt(['email' => Input::get('email'), 'password' => Input::get('password')])){
-
 			return redirect()->intended('/');
 		}
 

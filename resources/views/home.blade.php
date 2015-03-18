@@ -14,7 +14,7 @@
 
 		<ul>
 			@foreach($users as $user)
-				<li>{{ $user }}</li>
+				<li><a href="{{ URL::route('profile_path', $user->first_name) }}">{{ $user->first_name }}</a></li>
 			@endforeach
 		</ul>
 

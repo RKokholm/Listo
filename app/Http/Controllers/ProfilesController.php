@@ -48,11 +48,9 @@ class ProfilesController extends Controller {
 	 */
 	public function show($first_name)
 	{
-		$user = User::where('first_name', '=', $first_name);
+		$user = User::with('profile')->where('first_name', $first_name)->first();
 
-		if($user->count()) {
-
-			$user = $user->first();
+		if($user) {
 			return view('profiles.show')->with('user', $user);
 		}
 
