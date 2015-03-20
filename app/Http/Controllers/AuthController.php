@@ -24,7 +24,8 @@ class AuthController extends Controller {
 	public function store()
 	{
 		if (Auth::attempt(['email' => Input::get('email'), 'password' => Input::get('password')])){
-			return redirect()->intended('/');
+			$user = Auth::user()->username;
+			return Redirect::route('profile_path', $user);
 		}
 
 		return Redirect::back()->withInput()->withErrors(['Wrong username or password']);

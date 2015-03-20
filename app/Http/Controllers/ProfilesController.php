@@ -7,6 +7,7 @@ use Illuminate\Http\Request;
 use App\User;
 use App;
 use Redirect;
+use Auth;
 
 class ProfilesController extends Controller {
 
@@ -46,23 +47,24 @@ class ProfilesController extends Controller {
 	 * @param  int  $id
 	 * @return Response
 	 */
-	public function show($first_name)
+	public function show($username)
 	{
-		$user = User::with('profile')->where('first_name', $first_name)->first();
+		$user = User::with('profile')->where('username', $username)->first();
 
 		if($user) {
+
+			if($user->id == Auth::user()->id) {
+
 			return view('profiles.show')->with('user', $user);
+
+			}
+
+			return Redirect::route('profile_path', Auth::user()->username)->with('error', 'You do not have access to that profile');
 		}
 
-		return Redirect::route('home');
+		return Redirect::route('profile_path', Auth::user()->username)->with('error', 'that user does not exist');
 	}
 
-	/**
-	 * Show the form for editing the specified resource.
-	 *
-	 * @param  int  $id
-	 * @return Response
-	 */
 	public function edit($id)
 	{
 		//

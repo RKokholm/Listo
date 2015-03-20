@@ -11,6 +11,9 @@
 		
 		{!! Form::label('last_name', null,['class' => 'label_style']) !!}<br>
 		{!! Form::text('last_name', null,['class' => 'form_field', 'required']) !!}<br>
+
+		{!! Form::label('username', null,['class' => 'label_style']) !!}<br>
+		{!! Form::text('username', null,['class' => 'form_field', 'required']) !!}<br>		
 		
 		{!! Form::label('email', null,['class' => 'label_style']) !!}<br>
 		{!! Form::email('email', null,['class' => 'form_field', 'required']) !!}<br>

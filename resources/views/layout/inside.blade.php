@@ -15,11 +15,12 @@
 	<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
 </head>
 <body>
-	<div id="header">
+	<div id="header_interface">
 		<div id="headercenter">
-			<a href="{{ URL::route('home') }}"><span id="icon">Listo</span></a>
-			
-				<a href="{{ URL::route('login_path') }}"><span class="log_auth">Sign in</span></a>
+			<a href="{{ URL::route('home') }}"><span id="icon_interface">Listo</span></a>
+
+				<a href="#"><span class="log_auth_interface">{{ Auth::user()->first_name }}</span></a> <a href="{{ URL::route('logout_path') }}"><span class="log_auth_interface">Sign out</span></a>
+				
 
 		</div>
 	</div>
