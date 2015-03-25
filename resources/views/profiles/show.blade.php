@@ -17,14 +17,22 @@
 			<a href="#"><li>Shared</li></a>
 		</ul>
 
-		<a href="#"><div id="plus_button"><i class="fa fa-plus"></i></div></a>
-		<a href="#" id="new_list_button">New list</a>
-
 	</div>
 
 	<div id="show_box">
 
-		Lists of {{ $user->first_name }}<br>
+		<h6>List number 1</h6>
+
+		<div class="seperator_line"></div>
+
+		<ul id="list_elements">
+			<li>List Element</li>
+			<li>List Element</li>
+			<li>List Element</li>
+			<li>List Element</li>
+			<li>List Element</li>
+			<li>List Element</li>
+		</ul>
 
 		{{ Session::get('error') }}
 		

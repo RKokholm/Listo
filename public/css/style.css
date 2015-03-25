@@ -21,7 +21,7 @@ time, mark, audio, video {
 
 body {
 	height: 1000px;
-	background: #FAFAFA;
+	background: #E7E1E1;
 }
 
 h1 {
@@ -51,6 +51,13 @@ h5 {
 	text-align: center;
 }
 
+h6 {
+	font-family: 'open sans';
+	color: rgb(124, 124, 124);
+	font-size: 17px;
+	  margin: -4px 0px 6px 9px;	
+}
+
 #header {
 	width: 100%;
 	height: 100px;
@@ -60,7 +67,7 @@ h5 {
 #header_interface {
 	width: 100%;
 	height: 35px;
-	background: #2574A9;
+	background: #1F4C6B;
 }
 
 #headercenter {
@@ -73,7 +80,6 @@ h5 {
 	width: 900px;
 	margin: auto;
 	height: 100%;
-	padding: 10px;
 }
 
 #icon {
@@ -137,7 +143,7 @@ h5 {
 
 .log_auth_interface:hover {
   color: white;
-  background: rgb(34, 107, 157);
+  background: rgb(28, 69, 97);
   -webkit-transition-duration: 0.2s;
 }
 
@@ -155,9 +161,7 @@ h5 {
 #right_nav {
 	float: left;
 	height: 100%;
-	width: 200px;
-	background: rgb(242, 242, 242);
- 	border: 1px solid rgb(216, 216, 216);
+	width: 25%;
  	padding: 5px;
  	box-sizing: border-box;
 }
@@ -165,11 +169,11 @@ h5 {
 #show_box {
 	float: left;
 	background: rgb(242, 242, 242);
- 	border: 1px solid rgb(216, 216, 216);
+ 	border: 1px solid rgb(207, 207, 207);
  	height: 100%;
- 	width: 686px;
- 	margin-left: 10px;
-
+ 	width: 74%;
+ 	padding: 10px;
+ 	box-sizing: border-box;
 }
 
 #user_info {
@@ -257,4 +261,29 @@ h5 {
   color: white;
   box-sizing: border-box;
   margin: 6px 10px;
-};
+}
+
+.seperator_line {
+	width: 100%;
+	height: 1px;
+	background: rgb(207, 207, 207);
+	margin-bottom: 10px;
+}
+
+#list_elements li {
+	width: 100%;
+  	height: 35px;
+  	background: rgb(231, 231, 231);
+  	margin: 5px 0px 0px 0px;
+  	list-style-type: none;
+  	font-family: 'Open Sans';
+  	box-sizing: border-box;
+  	padding: 8px;
+  	font-size: 14px;
+  	border: 1px solid rgb(197, 197, 197);
+}
+
+#list_elements li:hover {
+	background: #C3C3C3;
+  	border: 1px solid rgb(165, 163, 163);
+}
