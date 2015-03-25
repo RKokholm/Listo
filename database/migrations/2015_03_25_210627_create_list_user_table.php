@@ -3,7 +3,7 @@
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateListsTable extends Migration {
+class CreateListUserTable extends Migration {
 
 	/**
 	 * Run the migrations.
@@ -12,9 +12,9 @@ class CreateListsTable extends Migration {
 	 */
 	public function up()
 	{
-		Schema::create('lists', function(Blueprint $table)
-		{
-			$table->increments('id');
+		Schema::create('list_user', function(Blueprint $table){
+			$table->integer('list_id');
+			$table->integer('user_id');
 			$table->timestamps();
 		});
 	}
@@ -26,7 +26,7 @@ class CreateListsTable extends Migration {
 	 */
 	public function down()
 	{
-		Schema::drop('lists');
+		Schema::drop('list_user');
 	}
 
 }
