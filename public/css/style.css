@@ -55,7 +55,11 @@ h6 {
 	font-family: 'open sans';
 	color: rgb(124, 124, 124);
 	font-size: 17px;
-	  margin: -4px 0px 6px 9px;	
+	margin: -4px 0px 6px 9px;	
+}
+
+a {
+	text-decoration: none;
 }
 
 #header {
@@ -287,4 +291,29 @@ h6 {
 #list_elements li:hover {
 	background: #E4E4E4;
 	border: 1px solid rgb(195, 195, 195);
+}
+
+#new_list {
+	background: rgb(31, 76, 107);
+  	height: 32px;
+  	width: 100px;
+  	border-radius: 1px;
+  	font-family: 'open sans';
+  	box-sizing: border-box;
+  	font-size: 16px;
+  	color: white;
+  	padding-top: 4px;
+  	margin: auto;
+  	text-align: center;
+}
+
+#new_list:hover {
+	background: #276691;
+}
+
+.fa.fa-plus {
+  font-size: 14px;
+  color: white;
+  box-sizing: border-box;
+  margin: 0px 4px 0px 0px;
 }

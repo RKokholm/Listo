@@ -17,6 +17,8 @@
 			<a href="#"><li>Shared</li></a>
 		</ul>
 
+		<a href="#"><div id="new_list"><i class="fa fa-plus"></i>New List</div></a>
+
 	</div>
 
 	<div id="show_box">
