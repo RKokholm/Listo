@@ -3,7 +3,7 @@
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateListsTable extends Migration {
+class CreateSheetUserTable extends Migration {
 
 	/**
 	 * Run the migrations.
@@ -12,13 +12,11 @@ class CreateListsTable extends Migration {
 	 */
 	public function up()
 	{
-		Schema::create('sheets', function(Blueprint $table){
-
+		Schema::create('sheet_user', function(Blueprint $table){
 			$table->increments('id');
-			$table->string('title');
-			$table->string('description');
+			$table->integer('sheet_id');
+			$table->integer('user_id');
 			$table->timestamps();
-
 		});
 	}
 
@@ -29,7 +27,7 @@ class CreateListsTable extends Migration {
 	 */
 	public function down()
 	{
-		Schema::drop('sheets');
+		Schema::drop('sheet_user');
 	}
 
 }
