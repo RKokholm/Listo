@@ -12,7 +12,7 @@ class CreateListUserTable extends Migration {
 	 */
 	public function up()
 	{
-		Schema::create('list_user', function(Blueprint $table){
+		Schema::create('sheet_user', function(Blueprint $table){
 			$table->integer('list_id');
 			$table->integer('user_id');
 			$table->timestamps();
@@ -26,7 +26,7 @@ class CreateListUserTable extends Migration {
 	 */
 	public function down()
 	{
-		Schema::drop('list_user');
+		Schema::drop('sheet_user');
 	}
 
 }
