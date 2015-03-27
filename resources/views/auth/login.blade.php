@@ -16,7 +16,7 @@
 		
 	{!! Form::close() !!}
 
-	<a href="{{ URL::route('register_path') }}"><span class="link_style">Create Account</span></a>
+	<a href="{{ URL::route('register_path') }}"><span class="sheet_style">Create Account</span></a>
 	
 	@if($errors->any())
 

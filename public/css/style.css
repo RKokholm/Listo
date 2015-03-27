@@ -26,7 +26,7 @@ body {
 
 h1 {
 	font-family: 'source sans pro', 'sans-serif';
-	color: #5F9DB0;
+	color: #1F4C6B;
 	font-size: 50px;
 	text-align: center;
 }
@@ -62,10 +62,14 @@ a {
 	text-decoration: none;
 }
 
+.button_style {
+	background: blue;
+}
+
 #header {
 	width: 100%;
 	height: 100px;
-	background: #2574A9;
+	background: #1F4C6B;
 }
 
 #header_interface {
@@ -127,7 +131,7 @@ a {
 }
 
 .log_auth:hover {
-  color: #4183D7;
+  color: #1F4C6B;
   background: white;
   -webkit-transition-duration: 0.2s;
 }
@@ -162,6 +166,11 @@ a {
 
 }
 
+.form_field_center {
+	padding: 5px;
+	margin: auto;
+}
+
 #right_nav {
 	float: left;
 	height: 100%;
@@ -186,20 +195,20 @@ a {
 	box-sizing: border-box;
 }
 
-#list_types {
+#sheet_types {
 	margin: auto;
 	display: block;
 	height: 44px;
 }
 
-#list_types a {
+#sheet_types a {
  text-decoration: none;	
  color: #6F6F6F;
  font-family: 'open sans';
  font-size: 15px;
 }
 
-#list_types a li {
+#sheet_types a li {
 	list-style-type: none;
 	padding: 5px;
 	width: 28%;
@@ -208,7 +217,7 @@ a {
 	border-bottom: 1px solid rgb(202, 202, 202);
 }
 
-#list_types a li:hover {
+#sheet_types a li:hover {
 	list-style-type: none;
 	padding: 5px;
 	width: 27%;
@@ -228,7 +237,7 @@ a {
 	box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.64);
 }
 
-#new_list_button {
+#new_sheet_button {
   color: white;
   text-decoration: none;
   margin: auto;
@@ -242,7 +251,7 @@ a {
   float: left;
 }
 
-#new_list_button:hover {
+#new_sheet_button:hover {
 	background: #1A5780;
 }
 
@@ -274,7 +283,7 @@ a {
 	margin-bottom: 10px;
 }
 
-#list_elements li {
+#sheet_elements li {
 	width: 100%;
   	height: 35px;
   	background: rgb(237, 237, 237);
@@ -288,12 +297,12 @@ a {
   	border-radius: 2px;
 }
 
-#list_elements li:hover {
+#sheet_elements li:hover {
 	background: #E4E4E4;
 	border: 1px solid rgb(195, 195, 195);
 }
 
-#new_list {
+#new_sheet {
 	background: rgb(31, 76, 107);
   	height: 32px;
   	width: 100px;
@@ -307,7 +316,7 @@ a {
   	text-align: center;
 }
 
-#new_list:hover {
+#new_sheet:hover {
 	background: #276691;
 }
 
@@ -317,3 +326,8 @@ a {
   box-sizing: border-box;
   margin: 0px 4px 0px 0px;
 }
+
+.new_sheet_form {
+	margin: 5px;
+}
+

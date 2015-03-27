@@ -5,9 +5,13 @@ use App\Http\Controllers\Controller;
 
 use Illuminate\Http\Request;
 use App\User;
+use App\Sheet;
 use App;
 use Redirect;
 use Auth;
+use Validator;
+use Input;
+
 
 class ProfilesController extends Controller {
 
@@ -38,7 +42,25 @@ class ProfilesController extends Controller {
 	 */
 	public function store()
 	{
-		//
+		$validator = Validator::make(Input::all(), [
+			'sheet_title' => 'required|max:25',
+			'sheet_desc' => 'max:100'
+		]);
+
+		if ($validator->fails()){
+			return Redirect::back()->withErrors($validator)->withInput();
+		}
+
+		$sheet = Sheet::create([
+			'title' => Input::get('sheet_title'),
+			'description' => Input::get('sheet_desc')
+		]);
+
+		$user = Auth::user();
+		$sheet->users()->attach($user);
+
+		return Redirect::back();
+
 	}
 
 	/**

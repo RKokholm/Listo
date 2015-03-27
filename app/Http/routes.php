@@ -11,4 +11,4 @@ Route::get('register', ['as' => 'register_path', 'uses' => 'UsersController@crea
 Route::post('register', ['as' => 'register_path', 'uses' => 'UsersController@store']);
 
 Route::get('/{profile}', ['as' => 'profile_path', 'uses' => 'ProfilesController@show']);
-Route::post('/{profile}', ['as' => 'profile_path', 'uses' => 'ProfilesController@list_create']);
+Route::post('/{profile}', ['as' => 'profile_path', 'uses' => 'ProfilesController@store']);
