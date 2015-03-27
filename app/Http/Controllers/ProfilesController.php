@@ -52,7 +52,7 @@ class ProfilesController extends Controller {
 		}
 
 		$sheet = Sheet::create([
-			'title' => Input::get('sheet_title'),
+			'title' => ucfirst(Input::get('sheet_title')),
 			'description' => Input::get('sheet_desc')
 		]);
 
@@ -71,13 +71,13 @@ class ProfilesController extends Controller {
 	 */
 	public function show($username)
 	{
-		$user = User::with('profile')->where('username', $username)->first();
+		$user = User::with(['profile', 'sheets'])->where('username', $username)->first();
 
 		if($user) {
 
 			if($user->id == Auth::user()->id) {
 
-			return view('profiles.show')->with('user', $user);
+				return view('profiles.show')->with('user', $user);
 
 			}
 

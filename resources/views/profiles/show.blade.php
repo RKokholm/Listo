@@ -17,6 +17,16 @@
 			<a href="#"><li>Shared</li></a>
 		</ul>
 
+		<ul id="sheet_titles">
+
+			@foreach($user->sheets as $sheet)
+				
+				<li>{{ $sheet->title }}</i></li>
+
+			@endforeach
+
+		</ul>
+
 		<a href="#"><div id="new_sheet"><i class="fa fa-plus"></i>New List</div></a>
 
 		@include('layout.partials.error')
@@ -34,7 +44,17 @@
 
 	<div id="show_box">
 
-		<h6>Sheet number 1</h6>
+		<h6>Sheet number 1<i class="fa fa-pencil-square-o"></i></h6>
+
+		<div class="seperator_line"></div>
+
+		<div id="sheet_desc_area">
+
+			<h2>Sheet description<i class="fa fa-pencil-square-o"></i></h2>
+
+			<div id="sheet_desc_text">{{ $sheet->description }}</div>
+
+		</div><br>
 
 		<div class="seperator_line"></div>
 

@@ -40,7 +40,7 @@ class User extends Model implements AuthenticatableContract, CanResetPasswordCon
 
 	public function sheets(){
 
-		return $this->hasMany('App\Sheets');
+		return $this->belongsToMany('App\Sheet');
 	}
 }
 
