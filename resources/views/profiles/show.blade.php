@@ -53,11 +53,7 @@
 	</div>
 
 	<div id="show_box">
-				@if(isset($sheet))
-				
-					{{ $sheet }}
-				
-				@endif
+				{{ $sheet }}
 				<!--<h6>Sheet number 1<i class="fa fa-pencil-square-o"></i></h6>
 
 				<div class="seperator_line"></div>

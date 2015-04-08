@@ -57,9 +57,10 @@ class ProfilesController extends Controller {
 		]);
 
 		$user = Auth::user();
+		$username = Auth::user()->username;
 		$sheet->users()->attach($user);
 
-		return Redirect::back();
+		return Redirect::route('profile_path', $username);
 
 	}
 
@@ -117,9 +118,9 @@ class ProfilesController extends Controller {
 
 	public function showSheet($username, $sheetname)
 	{
-		$sheet = Sheet::where('title', $sheetname)->get();
+		$sheet = Sheet::where('title', $sheetname)->first();
 		$user = User::with(['profile', 'sheets'])->where('username', $username)->first();
-		return view('profiles.show')->with('user', $user, 'sheet', $sheet);
+		return view('profiles.show', compact('sheet', 'user'));
 	}
 
 }
