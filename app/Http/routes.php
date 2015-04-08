@@ -12,6 +12,6 @@ Route::post('register', ['as' => 'register_path', 'uses' => 'UsersController@sto
 
 Route::get('/{profile}', ['as' => 'profile_path', 'uses' => 'ProfilesController@show']);
 Route::post('/{profile}', ['as' => 'profile_path', 'uses' => 'ProfilesController@store']);
-Route::post('/{id}', ['as' => 'sheet_destroy_path', 'uses' => 'ProfilesController@destroy']);
+Route::get('sheets/delete/{id}', ['as' => 'sheet_destroy_path', 'uses' => 'SheetsController@destroy']);
 
 Route::get('/{profile}/sheet/{sheet}', ['as' => 'show_sheet_path', 'uses' => 'ProfilesController@showSheet']);

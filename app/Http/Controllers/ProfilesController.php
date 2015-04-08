@@ -2,11 +2,10 @@
 
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
-
 use Illuminate\Http\Request;
+
 use App\User;
 use App\Sheet;
-use App;
 use Redirect;
 use Auth;
 use Validator;
@@ -106,7 +105,7 @@ class ProfilesController extends Controller {
 	 */
 	public function destroy($id)
 	{
-		$sheet = Sheet::find($id);
+		return $sheet = Sheet::find($id);
 		
 	}
 
