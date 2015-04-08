@@ -43,7 +43,7 @@ h4 {
 	font-size: 15px;
 	text-align: center;
 }
-
+	
 h5 {
 	font-family: 'open sans';
 	color: rgb(124, 124, 124);
@@ -70,7 +70,33 @@ a {
 }
 
 .button_style {
-	background: blue;
+	background: rgb(31, 76, 107);
+ 	margin: 9px auto;
+  	display: block;
+  	padding: 7px 18px;
+  	color: white;
+  	border: 1px solid rgb(23, 60, 86);
+  	border-radius: 1px;
+  	box-shadow: 0px 1px 1px 0px rgba(0, 0, 0, 0.38);
+}
+
+.button_style:hover {
+	background: #296086;
+}
+
+.button_style_login {
+	background: rgb(31, 76, 107);
+ 	margin: 9px 0px;
+  	display: block;
+  	padding: 7px 18px;
+  	color: white;
+  	border: 1px solid rgb(23, 60, 86);
+  	border-radius: 1px;
+  	box-shadow: 0px 1px 1px 0px rgba(0, 0, 0, 0.38);
+}
+
+.button_style_login:hover {
+	background: #296086;
 }
 
 #header {
@@ -110,7 +136,7 @@ a {
   font-size: 28px;
   color: white;
   display: inline-block;
-  margin: -2px 77px;
+  margin: -2px 90px;
 }
 
 .link_style{
@@ -163,8 +189,8 @@ a {
 }
 
 .label_style {
-	color: #68C3A3;
-	font-family: Cabin;
+	color: #1F4C6B;
+	font-family: 'open sans';
 	font-size: 20px;
 }
 
@@ -174,8 +200,10 @@ a {
 }
 
 .form_field_center {
+	width: 100%;
 	padding: 5px;
-	margin: auto;
+	margin: 2px auto;
+	box-sizing: border-box;
 }
 
 #right_nav {
@@ -310,21 +338,26 @@ a {
 }
 
 #new_sheet {
+
 	background: rgb(31, 76, 107);
   	height: 32px;
   	width: 100px;
   	border-radius: 1px;
-  	font-family: 'open sans';
+	font-family: 'open sans';
   	box-sizing: border-box;
-  	font-size: 16px;
+  	font-size: 14px;
   	color: white;
-  	padding-top: 4px;
-  	margin: auto;
+  	padding-top: 5px;
+  	margin: 0px auto 10px auto;
   	text-align: center;
+  	border: 1px solid rgb(27, 65, 92);
+
 }
 
 #new_sheet:hover {
 	background: #276691;
+	border: 1px solid rgb(32, 82, 116);
+	cursor: pointer;
 }
 
 .fa.fa-plus {
@@ -332,10 +365,6 @@ a {
   color: white;
   box-sizing: border-box;
   margin: 0px 4px 0px 0px;
-}
-
-.new_sheet_form {
-	margin: 5px;
 }
 
 #sheet_titles {
@@ -346,17 +375,19 @@ a {
 	list-style: none;
   	width: 100%;
   	height: 30px;
-  	background: rgb(219, 213, 213);
+  	background: rgb(244, 244, 244);
   	box-sizing: border-box;
   	padding: 5px 9px;
   	margin: 3px 0px;
   	border: 1px solid rgb(186, 175, 175);
   	font-family: 'open sans';
   	font-size: 13px;
+  	color: rgb(98, 98, 98);
 }
 
 #sheet_titles li:hover {
-	background: #D3C9C9;
+	background: #E8E8E8;
+	cursor: pointer;
 }
 
 #sheet_desc_area {
@@ -380,4 +411,25 @@ a {
 .fa.fa-pencil-square-o:hover {
 	color: #1F4C6B;
 	cursor: pointer;
+}
+
+.form_wrapper {
+	display: none;
+}
+
+.fa.fa-trash-o {
+	color: rgb(94, 94, 94);
+  	padding: 3px;
+ 	float: right;
+  	margin: -1px -6px 0px 0px;
+  	border-radius: 3px;
+  	border: 1px solid transparent;
+}
+
+.fa.fa-trash-o:hover {
+	border: 1px solid rgb(25, 60, 84);
+  	border-radius: 3px;
+  	color: #FFFFFF;
+  	background: rgb(31, 76, 107);
+  	box-shadow: 0px 1px 1px 0px rgba(0, 0, 0, 0.38);
 }

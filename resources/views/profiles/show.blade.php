@@ -19,53 +19,63 @@
 
 		<ul id="sheet_titles">
 
-			@foreach($user->sheets as $sheet)
-				
-				<li>{{ $sheet->title }}</i></li>
+			@if($user->sheets)
 
-			@endforeach
+				@foreach($user->sheets as $sheet)
+					
+					<a href="{{ URL::route('show_sheet_path', [Auth::user()->username, $sheet->title]) }}"><li>{{ $sheet->title }}<a href="{{ URL::route('sheet_destroy_path', $sheet->id) }}"><i class="fa fa-trash-o"></i></a></li></a>
+
+				@endforeach
+
+			@endif
 
 		</ul>
 
-		<a href="#"><div id="new_sheet"><i class="fa fa-plus"></i>New List</div></a>
+		<div id="new_sheet"><i class="fa fa-plus"></i>New Sheet</div>
 
 		@include('layout.partials.error')
 
-		{!! Form::open(['route' => ['profile_path', $user->username], 'class' => 'new_sheet_form']) !!}
+		<div class="form_wrapper">
 
-			{!! Form::text('sheet_title', null, ['required' => 'required', 'placeholder' => 'Sheet title', 'class' => 'form_field_center']) !!}
-			{!! Form::text('sheet_desc', null, ['required' => 'required', 'placeholder' => 'Description', 'class' => 'form_field_center']) !!}
+			{!! Form::open(['route' => ['profile_path', $user->username], 'class' => 'new_sheet_form']) !!}
 
-			{!! Form::submit('Add Sheet', ['class' => 'button_style']) !!}
+				{!! Form::text('sheet_title', null, ['required' => 'required', 'placeholder' => 'Sheet title', 'class' => 'form_field_center']) !!}
+				{!! Form::text('sheet_desc', null, ['required' => 'required', 'placeholder' => 'Description', 'class' => 'form_field_center']) !!}
 
-		{!! Form::close() !!}
+				{!! Form::submit('Add Sheet', ['class' => 'button_style']) !!}
+
+			{!! Form::close() !!}
+
+		</div>
+
+		Heeey
 
 	</div>
 
 	<div id="show_box">
 
-		<h6>Sheet number 1<i class="fa fa-pencil-square-o"></i></h6>
+				<!--<h6>Sheet number 1<i class="fa fa-pencil-square-o"></i></h6>
 
-		<div class="seperator_line"></div>
+				<div class="seperator_line"></div>
 
-		<div id="sheet_desc_area">
+				<div id="sheet_desc_area">
 
-			<h2>Sheet description<i class="fa fa-pencil-square-o"></i></h2>
+					<h2>Sheet description<i class="fa fa-pencil-square-o"></i></h2>
 
-			<div id="sheet_desc_text">{{ $sheet->description }}</div>
+					<div id="sheet_desc_text">Sheet Description</div>
 
-		</div><br>
+				</div><br>
 
-		<div class="seperator_line"></div>
+				<div class="seperator_line"></div>
 
-		<ul id="sheet_elements">
-			<li>Sheet Element</li>
-			<li>Sheet Element</li>
-			<li>Sheet Element</li>
-			<li>Sheet Element</li>
-			<li>Sheet Element</li>
-			<li>Sheet Element</li>
-		</ul>
+				<ul id="sheet_elements">
+					<li>Sheet Element</li>
+					<li>Sheet Element</li>
+					<li>Sheet Element</li>
+					<li>Sheet Element</li>
+					<li>Sheet Element</li>
+					<li>Sheet Element</li>
+				</ul>-->
 
 		{{ Session::get('error') }}
 		

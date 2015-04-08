@@ -12,7 +12,7 @@
 		{!! Form::label('password', null, ['class' => 'label_style']) !!}<br>
 		{!! Form::password('password', ['class' => 'form_field', 'required']) !!}<br>
 
-		{!! Form::submit('Log in', ['class' => 'button_style']) !!}
+		{!! Form::submit('Log in', ['class' => 'button_style_login']) !!}
 		
 	{!! Form::close() !!}
 

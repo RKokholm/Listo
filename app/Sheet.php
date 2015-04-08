@@ -19,4 +19,8 @@ class Sheet extends Model {
 		return $this->belongsToMany('App\User')->withTimestamps();
 	}
 
+	public function elements(){
+		return $this->belongsToMany('App\Element')->withTimestamps();
+	}
+
 }
