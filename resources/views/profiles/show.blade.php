@@ -23,7 +23,7 @@
 
 				@foreach($user->sheets as $sheet)
 					
-					<a href="{{ URL::route('show_sheet_path', [Auth::user()->username, $sheet->title]) }}"><li>{{ $sheet->title }}<a href="{{ URL::route('sheet_destroy_path', $sheet->id) }}"><i class="fa fa-trash-o"></i></a></li></a>
+					<a href="{{ URL::route('show_sheet_path', [Auth::user()->username, $sheet->title]) }}"><li>{{ $sheet->title }}<!--<a href="{{ URL::route('sheet_destroy_path', $sheet->id) }}"><i class="fa fa-trash-o"></i></a>--></li></a>
 
 				@endforeach
 
@@ -53,7 +53,11 @@
 	</div>
 
 	<div id="show_box">
-
+				@if(isset($sheet))
+				
+					{{ $sheet }}
+				
+				@endif
 				<!--<h6>Sheet number 1<i class="fa fa-pencil-square-o"></i></h6>
 
 				<div class="seperator_line"></div>

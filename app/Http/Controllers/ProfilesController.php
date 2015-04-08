@@ -112,13 +112,14 @@ class ProfilesController extends Controller {
 	public function destroy($id)
 	{
 		$sheet = Sheet::find($id);
-		return $sheet;
+		
 	}
 
 	public function showSheet($username, $sheetname)
 	{
+		$sheet = Sheet::where('title', $sheetname)->get();
 		$user = User::with(['profile', 'sheets'])->where('username', $username)->first();
-		return view('profiles.show')->with('user', $user);
+		return view('profiles.show')->with('user', $user, 'sheet', $sheet);
 	}
 
 }
