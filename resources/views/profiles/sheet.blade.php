@@ -16,8 +16,8 @@
 		</ul>
 
 		<ul id="sheet_titles">
-			@foreach($user->sheets as $sheet)
-				<a href="{{ URL::route('show_sheet_path', [Auth::user()->username, $sheet->title]) }}"><li>{{ $sheet->title }}<!--<a href="{{ URL::route('sheet_destroy_path', $sheet->id) }}"><i class="fa fa-trash-o"></i></a>--></li></a>
+			@foreach($user->sheets as $user_sheet)
+				<a href="{{ URL::route('show_sheet_path', [Auth::user()->username, $user_sheet->title]) }}"><li>{{ $user_sheet->title }}<!--<a href="{{ URL::route('sheet_destroy_path', $user_sheet->id) }}"><i class="fa fa-trash-o"></i></a>--></li></a>
 			@endforeach
 		</ul>
 
@@ -43,6 +43,7 @@
 	</div>
 
 	<div id="show_box">	
+		{{ $sheet }}
 		<!--<h6>Sheet number 1<i class="fa fa-pencil-square-o"></i></h6>
 
 		<div class="seperator_line"></div>

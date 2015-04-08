@@ -72,20 +72,14 @@ class ProfilesController extends Controller {
 	 */
 	public function show($username)
 	{
-		$user = User::with(['profile', 'sheets'])->where('username', $username)->first();
+		try {
+			
+			$user = User::with(['profile', 'sheets'])->where('username', $username)->firstOrFail();
+			return view('profiles.show', compact('user'));
 
-		if($user) {
-
-			if($user->id == Auth::user()->id) {
-
-				return view('profiles.show')->with('user', $user);
-
-			}
-
-			return Redirect::route('profile_path', Auth::user()->username)->with('error', 'You do not have access to that profile');
+		} catch (Exception $e) {
+			return Redirect::route('profile_path', Auth::user()->username)->with('error', 'that user does not exist');
 		}
-
-		return Redirect::route('profile_path', Auth::user()->username)->with('error', 'that user does not exist');
 	}
 
 	public function edit($id)
@@ -120,7 +114,7 @@ class ProfilesController extends Controller {
 	{
 		$sheet = Sheet::where('title', $sheetname)->first();
 		$user = User::with(['profile', 'sheets'])->where('username', $username)->first();
-		return view('profiles.show', compact('sheet', 'user'));
+		return view('profiles.sheet', compact('sheet', 'user'));
 	}
 
 }
